@@ -4,14 +4,15 @@ import PlaygroundSupport
 class TableViewController : UITableViewController {
     
     var listitems = ["shawn","bill","larry"]
+    var text = ["Red", "Blue", "Black", "Yellow", "Green"]
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listitems.count
+        return text.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "\(listitems[indexPath.row])"
+        cell.textLabel?.text = "\(text[indexPath.row])"
         return cell
     }
 
